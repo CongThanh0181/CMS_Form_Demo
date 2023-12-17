@@ -1,0 +1,119 @@
+@import url(./common.css);
+
+body {
+    display: block;
+}
+
+/* header */
+header {
+    height: 50px;
+    border-bottom: 1px solid #dfdfdf;
+    background-color: #f8f8f8;
+    padding: 0 15px;
+}
+
+.logo {
+    color: #8a93a0;
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 1.4rem;
+}
+
+.btn-header {
+    height: 48px;
+    color: #23527c !important;
+}
+
+.btn.focus, .btn:focus {
+    box-shadow: none;
+    background-color: #eeeeee;
+    color: #23527c !important;
+}
+
+.dropdown-menu.show {
+    transform: translate3d(-102px, 48px, 0px) !important;
+    padding: 0;
+    box-shadow: -5px 5px 20px #999;
+}
+
+.dropdown-menu li:first-child {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.dropdown-item {
+    padding: 10px 24px;
+    color: #333;
+}
+
+/* side bar */
+.sidebar {
+    background-color: #f8f8f8;
+    border-right: 1px solid #dfdfdf;
+    padding: 0;
+}
+
+.sidebar-search {
+    padding: 20px 0;
+    border-bottom: 1px solid #dfdfdf;
+
+}
+
+.form-inline {
+    flex-flow: nowrap;
+}
+
+.input-search {
+    border-radius: 0.25rem 0 0 0.25rem;
+    flex-grow: 1;
+    width: 0 !important;
+}
+
+.btn-search {
+    background-color: #fff;
+    border-radius: 0 0.25rem 0.25rem 0;
+    border: 1px solid #ced4da;
+}
+
+.btn.focus, .btn:focus {
+    color: #333;
+}
+
+.sidebar-link__item {
+    padding: 20px 15px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.sidebar-link__item a {
+    color: #447eb8;
+    display: block;
+}
+
+/* info */
+.info {
+    padding: 40px 30px;
+    color: #333;
+    background-color: #fff;
+}
+
+.info-title {
+    border-bottom: 1px solid #dfdfdf;
+    margin-bottom: 20px;
+}
+
+.form-info-80 {
+    width: 80%;
+}
+
+.info label {
+    font-weight: 500;
+}
+
+.info textarea {
+    box-shadow: 1px 1px 10px 1px #f8f8f8;
+}
+
+
+

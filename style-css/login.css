@@ -1,0 +1,32 @@
+@import url(./common.css);
+
+.remember_me {
+    position: relative;
+    color: #585959;
+}
+
+.remember_me::after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-color: #dedede;
+    top: 6px;
+    left: -16px;
+    border-radius: 10%;
+    position: absolute;
+}
+
+.remember_me::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    border: 1px solid #4f4f4f;
+    top: 5px;
+    left: -17px;
+    border-radius: 16%;
+    position: absolute;
+}
+
+input[type="checkbox"]:checked + .remember_me::after {
+    display: none;
+}

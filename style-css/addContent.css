@@ -1,0 +1,6 @@
+@import url(./editProfile.css);
+
+/* side bar */
+.active {
+    background-color: #eeeeee;
+}

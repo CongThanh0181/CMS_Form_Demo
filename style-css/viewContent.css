@@ -1,0 +1,17 @@
+@import url(./addContent.css);
+.table-content {
+    padding: 15px 15px 30px;
+    overflow-x: auto;
+}
+
+th {
+    font-weight: 600;
+}
+
+th:last-child {
+    min-width: 140px;
+}
+
+th, td {
+    color: #333;
+}

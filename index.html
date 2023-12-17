@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <title>Login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="./style-css/resetCss.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap-4.6.2-dist/css/bootstrap.min.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="./style-css/login.css">
+  </head>
+  <body>
+        <main class="form m-auto">
+            <h5 class="form-title">Please Sign In</h5>
+            <form action="./sub-pages/editProfile.html" method="" class="form-info">
+                <div class="form-group">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" minlength="5" maxlength="50" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" minlength="8" maxlength="30" required>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="remember_me" id="remember_me">
+                    <label for="remember_me" class="remember_me">Remember Me</label>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success btn-block">Login</button>
+                </div>
+                <div class="form-group link">
+                    <a href="./sub-pages/register.html">Click here to Register</a>
+                </div>
+            </form>
+        </main>
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="./bootstrap-4.6.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- my js -->
+    <script src="./JS/login.js"></script>
+  </body>
+</html>

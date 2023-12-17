@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <title>Edit Profile</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="../style-css/resetCss.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bootstrap-4.6.2-dist/css/bootstrap.min.css">
+
+    <!-- font awesome-->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="../style-css/editProfile.css">
+  </head>
+  <body>
+        <!-- header -->
+        <header class="d-flex justify-content-between">
+          <div class="logo">
+            <span>CMS</span>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-header dropdown-toggle" type="button" data-toggle="dropdown">
+              <i class="fa fa-user"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./editProfile.html"><i class="fa fa-user"></i> User Profile</a></li>
+              <li id="out"><a class="dropdown-item" href="../inndex.html"><i class="fa-solid fa-right-from-bracket"></i> Out</a></li>
+            </ul>
+          </div>
+        </header>
+
+        <!-- main -->
+        <main>
+          <div class="d-flex vh-100">
+            <!-- side bar -->
+            <div class="sidebar col-3">
+              <div class="sidebar-search">
+                <form class="form-inline col-auto">
+                  <input class="form-control input-search" type="search" placeholder="Search..." aria-label="Search">
+                  <button class="btn btn-outline-secondary btn-search" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+              </div>
+              <div class="sidebar-links">
+                <div class="sidebar-link__item"><a href="./viewContent.html"><i class="fa-solid fa-table-cells"></i> View contents</a></div>
+                <div class="sidebar-link__item"><a href="./addContent.html"><i class="fa-regular fa-pen-to-square"></i> Form contents</a></div>
+              </div>
+            </div>
+
+            <!-- info -->
+            <div class="info col-9">
+              <div class="info-title">
+                <h1>Edit Profile</h1>
+              </div>
+              <div class="info-content form w-100">
+                  <h5 class="form-title">Profile Form Element</h5>
+                  <form action="./editProfile.html" method="" class="form-info form-info-80">
+                    <div class="form-group">
+                      <label for="firstName">First Name</label>
+                      <input type="text" name="firstName" id="firstName" class="form-control" placeholder="Enter the first name" minlength="3" maxlength="30" pattern="[A-Za-zÀ-ỹ ]+" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="lastName">Last Name</label>
+                      <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Enter the last name" minlength="3" maxlength="30" pattern="[A-Za-zÀ-ỹ ]+" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <p class="email">your_email@example.com</p>
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Phone</label>
+                        <input type="text" name="phone" id="phone" class="form-control" placeholder="Enter your phone number" minlength="9" maxlength="13" pattern="0\d{9,13}" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="desc">Description</label>
+                      <textarea name="desc" id="desc" cols="30" rows="3" class="form-control" maxlength="200"></textarea>
+                    </div>
+                    <div>
+                      <button type="submit" class="btn btn-outline-secondary">Submit Button</button>
+                      <button type="reset" class="btn btn-outline-secondary">Reset Button</button>
+                    </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </main>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="../bootstrap-4.6.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- my js -->
+    <script src="../JS/editProfile.js"></script>
+  </body>
+</html>
