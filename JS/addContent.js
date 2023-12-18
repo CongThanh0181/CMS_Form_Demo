@@ -8,13 +8,13 @@ let titleDOM = $("#title");
 let contentDOM = $("#content");
 
 let userCurrent = JSON.parse(localStorage.getItem(emailCurrent));
-// thêm thuộc tính datas nếu chưa có
+// add property datas
 if(!Array.isArray(userCurrent.datas)){
     userCurrent.datas = [];
 }
 
 
-// xử lý khi submit
+// handle submit
 formInfoDOM.onsubmit = function(event) {
     event.preventDefault();
 
@@ -37,6 +37,6 @@ formInfoDOM.onsubmit = function(event) {
 
     let json = JSON.stringify(userCurrent);
     localStorage.setItem(emailCurrent, json);
-    alert('Thêm content thành công!');
+    alert('Add content success!');
     formInfoDOM.submit();
 }

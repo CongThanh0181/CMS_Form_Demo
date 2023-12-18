@@ -26,7 +26,7 @@ if(userCurrent["desc"]){
     descDOM.value = userCurrent["desc"];
 }
 
-// xử lý khi submit
+// handle submit
 formInfoDOM.onsubmit = function(event){
     event.preventDefault();
     userCurrent.firstName = fixName(firstNameDOM.value);
@@ -34,21 +34,19 @@ formInfoDOM.onsubmit = function(event){
     userCurrent.phone = phoneDOM.value;
     userCurrent.desc = descDOM.value;
     localStorage.setItem(emailCurrent, JSON.stringify(userCurrent));
-    alert('Cập nhật thành công!');
+    alert('Update success!');
     formInfoDOM.submit();
 }
 
-// Hàm xử lý chuỗi loại bỏ khoảng trắng dư thừa, viết hoa chữ cái đầu
+// function handle string
 function fixName(nameStr) {
     nameStr = nameStr.trim().toLowerCase();
     nameStr = nameStr.split(" ");
     
-    // lưu ý nó chỉ lọc chứ không gán được element
     nameStr = nameStr.filter( (e) => {
         return e!= "";
     });
 
-    // lưu ý nó chỉ gán thay đổi dữ liệu chứ không xóa được element
     nameStr = nameStr.map( (e) => {
         if(e){
             return e.charAt(0).toUpperCase() + e.slice(1);

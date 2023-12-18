@@ -9,17 +9,17 @@ let registerBtnDOM = $('.register-btn');
 let formInfoDOM = $('.form-info');
 
 
-// xử lý khi click register button
+// handle click register button
 registerBtnDOM.onclick = function(event) {
     
-    // start kiểm tra user hoặc email đã tồn tại
+    // start check user or email exists
     let currentKey = emailDOM.value;
     let isRepeat = false;
     let emailsStorage = [];
     let userNamesStorage = [];
 
     for (let i = 0; i < localStorage.length; i++) {
-        // nếu không undefined
+        // if not undefined
         if((localStorage.getItem(localStorage.key(i)))["userName"]){
             let userNameStorage = JSON.parse(localStorage.getItem(localStorage.key(i)))["userName"];
             let emailStorage = localStorage.key(i);
@@ -34,26 +34,26 @@ registerBtnDOM.onclick = function(event) {
 
     if(isRepeat){
         event.preventDefault();
-        alert('User hoặc Email đã tồn tại!');
+        alert('User or Email exists!');
         return;
     }
-    // end kiểm tra user hoặc email đã tồn tại
+    // end check user or email exists
 
-    // start kiểm tra 2 mật khẩu khớp nhau
+    // start check 2 passwords
     if(passwordDOM.value.length >= 8 
         && rePasswordDOM.value.length >= 8 
         && passwordDOM.value !== rePasswordDOM.value){
             
             event.preventDefault();
-            alert('Mật khẩu xác nhận không khớp nhau!');
+            alert('Confirmation passwords do not match!');
             rePasswordDOM.focus();
             return;
     }
-    // end kiểm tra 2 mật khẩu khớp nhau
+    // end check 2 passwords
 };
 
 
-// xử lý khi form submit thông tin
+// handle form submit
 formInfoDOM.onsubmit = function(event) {
     event.preventDefault();
     const user = {
@@ -64,9 +64,9 @@ formInfoDOM.onsubmit = function(event) {
     }
     let json = JSON.stringify(user);
 
-    // lưu từng user theo key: email, value: user
+    // save user for key: email, value: user
     localStorage.setItem(emailDOM.value, json);
-    alert('Đăng ký thành công!');
+    alert('Sign Up Success!');
     formInfoDOM.submit();
 };
 

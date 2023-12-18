@@ -3,7 +3,7 @@ let $$ = document.querySelectorAll.bind(document);
 
 let tbodyDOM = $("tbody");
 
-// lấy data của user current
+// get data of user current
 let emailCurrent = localStorage.getItem("loginCurrent");
 let userCurrentDatas = JSON.parse(localStorage.getItem(emailCurrent))["datas"];
 

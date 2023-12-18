@@ -8,7 +8,7 @@ let rememberMeDOM = $('#remember_me');
 
 
 if(localStorage.getItem('isRemember') === "true") {
-    // render html khi có remember
+    // render html when remember is true
     let emailCurrent = localStorage.getItem('loginCurrent');
     let userCurrent = JSON.parse(localStorage.getItem(emailCurrent));
     emailDOM.value = emailCurrent;
@@ -17,7 +17,7 @@ if(localStorage.getItem('isRemember') === "true") {
 }
 
 
-// xử lý khi submit
+// handle submit
 formInfoDOM.onsubmit = function(event) {
     event.preventDefault();
     let emailCurrent = emailDOM.value;
@@ -25,23 +25,23 @@ formInfoDOM.onsubmit = function(event) {
 
     let user = JSON.parse(localStorage.getItem(emailCurrent));
 
-    // kiểm tra xem có khớp user không
+    // check user
     if(user) {
 
-        // kiểm tra khớp password
+        // check password
         if(user.password == passwordCurrent) {
 
-            // lưu thông tin user
+            // save user
             localStorage.setItem("loginCurrent", emailDOM.value);
             localStorage.setItem("isRemember", rememberMeDOM.checked);
-            alert('Đăng nhập thành công!');
+            alert('Logged in successfully!');
             formInfoDOM.submit();
             
         } else {
-            alert('Mật khẩu không chính xác!');
+            alert('incorrect password!');
         }
     } else {
-        alert('Tài khoản không tồn tại!');
+        alert('Account does not exist!');
     }
 
 }
